@@ -1,0 +1,33 @@
+{
+  "name": "iasa-kpi-ua-2",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "http": "0.0.0",
+    "swig": "^1.4.2",
+    "url": "^0.11.0",
+    "util": "^0.10.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ../iasa-kpi-ua-2/app.js &",
+    "started": "ps -ax | grep -e node | grep -e iasa-kpi-ua-2 | awk '{print $1}'",
+    "stop": " kill -9 $( ps -ax | grep -e node | grep -e iasa-kpi-ua-2 | awk '{print $1}' )",
+    "test": "node ./test/index.js"
+  },
+  "author": "Sergey Kukharev",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergej-kucharev/iasa-kpi-ua-2.git"
+  },
+  "keywords": [
+    "hello",
+    "world"
+  ],
+  "bugs": {
+    "url": "https://github.com/sergej-kucharev/iasa-kpi-ua-2/issues"
+  },
+  "homepage": "https://github.com/sergej-kucharev/iasa-kpi-ua-2#readme",
+  "description": ""
+}
