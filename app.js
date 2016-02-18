@@ -1,14 +1,41 @@
 #!/usr/bin/env node
 
-var http = require('http');
-var url = require('url');
-var util = require('util');
+var swig = require('swig');
+var tpl = new swig.Swig({
+	cache: false,
+	locals:{},
+	loader: swig.loaders.fs('./templates', {encoding: 'utf8'})
+});
 
-http.createServer(function(request, response){
-	request.URL = url.parse(request.url, true);
-	response.writeHead(200, {
-		'content-type': 'text/plain'
+var mach = require('mach');
+var app = mach.stack();
+app.use(mach.logger);
+app.use(mach.modified);
+app.use(mach.params);
+
+app.get('/templates/*', function(conn){
+	return mach.file({
+		root: __dirname,
+		autoIndex: false,
+		useLastModified: true,
+		useETag: true
+	})(conn);
+});
+
+app.use(mach.file, {
+	root: __dirname + '/storage/',
+	autoIndex: false,
+	useLastModified: true,
+	useETag: true
+});
+
+app.get('/', function(conn){
+	return new Promise(function(resolve, reject){
+		tpl.renderFile('default/index.html', {}, function(error, out){
+			if(error) reject(error)
+			else resolve(out);
+		});
 	});
-	response.write('iasa');
-	response.end('..');
-}).listen(3001);
+});
+
+mach.serve(app, {port: 3001});
