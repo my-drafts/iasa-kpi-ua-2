@@ -9,11 +9,6 @@ http.createServer(function(request, response){
 	response.writeHead(200, {
 		'content-type': 'text/plain'
 	});
-	response.write('Hello world!');
-	response.write('\n\n');
-	response.write(util.format('request headers: %s', JSON.stringify(request.headers)));
-	response.write('\n\n');
-	response.write(util.format('request url: %s', JSON.stringify(request.URL)));
-	response.write('\n\n');
+	response.write('iasa');
 	response.end('.');
-}).listen(3000);
+}).listen(3001);
