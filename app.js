@@ -10,5 +10,5 @@ http.createServer(function(request, response){
 		'content-type': 'text/plain'
 	});
 	response.write('iasa');
-	response.end('.');
+	response.end('..');
 }).listen(3001);
