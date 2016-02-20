@@ -11,7 +11,7 @@
     "fork": "node ../iasa-kpi-ua-2/app.js &",
     "start": "node ../iasa-kpi-ua-2/app.js",
     "state": "ps -ax | grep -e node | grep -e iasa-kpi-ua-2 | awk '{print $1}'",
-    "stop": " kill -9 $( ps -ax | grep -e node | grep -e iasa-kpi-ua-2 | awk '{print $1}' )",
+    "stop": "kill -9 $( ps -ax | grep -e node | grep -e iasa-kpi-ua-2 | awk '{print $1}' )",
     "test": "node ./test/index.js"
   },
   "author": "Sergey Kukharev",
