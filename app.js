@@ -9,11 +9,20 @@ var tpl = new swig.Swig({
 
 var mach = require('mach');
 var app = mach.stack();
-app.use(mach.logger);
+//app.use(mach.logger);
 app.use(mach.modified);
 app.use(mach.params);
 
 app.get('/templates/*', function(conn){
+	return mach.file({
+		root: __dirname,
+		autoIndex: false,
+		useLastModified: true,
+		useETag: true
+	})(conn);
+});
+
+app.get('/storage/*', function(conn){
 	return mach.file({
 		root: __dirname,
 		autoIndex: false,
