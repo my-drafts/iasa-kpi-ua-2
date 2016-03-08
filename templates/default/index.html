@@ -4,13 +4,14 @@
 	title: "ННК «Інститут Прикладного Системного Аналізу»",
 	description: "",
 	keywords: "",
+	lang: "uk",
 	geo: {
 		placename: "Київ",
 		position: "0, 0"
 	}
 } -%}
 
-<html lang="">
+<html lang="{{ lang | default(__default.lang) }}">
 
 <head>
 	<base href="http://iasa.zanner.org.ua/" />
@@ -25,7 +26,7 @@
 
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html" />
-	{#- <meta http-equiv="Content-Language" content="uk" /> -#}
+	{#- <meta http-equiv="Content-Language" content="{{ lang | default(__default.lang) }}" /> -#}
 	{#- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -#}
 
 	<meta name="audience" content="all" />
