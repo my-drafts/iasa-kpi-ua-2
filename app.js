@@ -9,7 +9,7 @@ var tpl = new swig.Swig({
 
 var mach = require('mach');
 var app = mach.stack();
-//app.use(mach.logger);
+app.use(mach.logger);
 app.use(mach.modified);
 app.use(mach.params);
 
@@ -47,4 +47,4 @@ app.get('/', function(conn){
 	});
 });
 
-mach.serve(app, {port: 3001});
+mach.serve(app, {port: 8081});
