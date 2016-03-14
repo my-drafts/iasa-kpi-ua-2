@@ -1,14 +1,109 @@
-html, body{
-	/*background-color: transparent;*/
-	background-image: url("/templates/default/index/img/bg-body-iasa-1.png");
-	background-repeat: repeat-x;
-	margin: 0;
-	padding: 0;
+html {
+  margin: 0;
+  padding: 0;
 }
-
-body > header{
-	background-image: url("/templates/default/index/img/bg-header-iasa-1.png");
-	background-position: top center;
-	background-repeat: no-repeat;
-	min-height: 400px;
+html > body {
+  background-color: #FFFFFF;
+  background-image: url("/templates/default/index/img/bg-body-iasa-1.png");
+  background-position: center -150px;
+  background-repeat: repeat-x;
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
+  position: relative;
+}
+html > body > .page-canvas {
+  border: 1px solid green;
+}
+html > body > .page-canvas > .paper-canvas {
+  margin: 0 64px;
+}
+html > body > .page-canvas > .paper-canvas > header {
+  background-image: url("/templates/default/index/img/bg-header-iasa-1.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  min-height: 32px;
+  position: relative;
+}
+html > body > .page-canvas > .paper-canvas > footer {
+  background-image: url("/templates/default/index/img/bg-footer-iasa-1.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 100px;
+}
+nav.toolbar {
+  background-color: #d5dced;
+  border-radius: 0 0 8px 8px;
+  font-size: 10pt;
+  padding: 8px 0;
+  line-height: 16pt;
+}
+nav.toolbar a {
+  text-decoration: none;
+}
+nav.toolbar img {
+  vertical-align: 0px;
+}
+nav.toolbar li,
+nav.toolbar ul {
+  margin: 0;
+  padding: 0;
+}
+nav.toolbar li {
+  display: inline-block;
+  padding: 0 8px;
+}
+nav.toolbar li:hover a {
+  color: #ffffff;
+}
+nav.toolbar ul {
+  list-style: none;
+  padding: 0 8px;
+}
+nav.toolbar > * {
+  border: 1px solid red;
+}
+nav.toolbar #menu-top {
+  float: left;
+}
+nav.toolbar #menu-language {
+  float: right;
+}
+nav.toolbar #search-bar {
+  float: right;
+}
+nav.toolbar #search-bar {
+  margin-bottom: 0px;
+}
+nav.toolbar #search-bar input,
+nav.toolbar #search-bar button {
+  font-size: 8pt;
+}
+nav.toolbar #search-bar input {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 0px;
+  min-width: 128px;
+}
+nav.toolbar #search-bar button {
+  background-color: transparent;
+  border: none;
+}
+nav.toolbar #menu-top-home {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+}
+nav.toolbar #menu-top-home {
+  background: url("/templates/default/toolbar/home-16.png") no-repeat;
+}
+nav.toolbar #menu-top-home:hover {
+  background-image: url("/templates/default/toolbar/home-16-white.png") !important;
+}
+nav.toolbar .clean {
+  border: none !important;
+  clear: both;
+  height: 1px;
+  overflow: hidden;
 }

@@ -49,9 +49,15 @@
 	<script type="text/javascript" src="/templates/default/index/js/script.js"></script>
 	<!-- end jquery -->
 
-	<!-- bootstrap 3 -->
-	<link type="text/css" rel="stylesheet" href="/templates/default/bootstrap-3/css/bootstrap.min.css">
-	<link type="text/css" rel="stylesheet" href="/templates/default/bootstrap-3/css/bootstrap-theme.min.css">
+	<!-- bootstrap -->
+	<link type="text/css" href="/templates/default/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="/templates/default/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+	<script type="text/javascript" src="/templates/default/bootstrap/js/bootstrap.min.js"></script>
+	<!-- end bootstrap -->
+
+	<!-- bootstrap 3 ->
+	<link type="text/css" href="/templates/default/bootstrap-3/css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="/templates/default/bootstrap-3/css/bootstrap-theme.min.css" rel="stylesheet">
 	<script type="text/javascript" src="/templates/default/bootstrap-3/js/bootstrap.min.js"></script>
 	<!-- end bootstrap 3 -->
 
@@ -59,27 +65,51 @@
 </head>
 
 <body>
-	<header>
+	<div class="page-canvas">
+		<div class="paper-canvas">
+			<header>
+				<nav class="toolbar">
+					<ul id="menu-top">
+						<li><a href="/"><span class="icon-home"></span></a></li>
+						<li><a href="/about">about</a></li>
+						<li><a href="/news">science</a></li>
+						<li><a href="/education">education</a></li>
+						<li><a href="/science">science</a></li>
+					</ul>
+					<ul id="menu-language">
+						<li><a href="http://iasa.kpi.ua">uk</a></li>
+						<li><a href="http://en.iasa.kpi.ua">en</a></li>
+						<li><a href="http://ru.iasa.kpi.ua">ru</a></li>
+					</ul>
+					<form id="search-bar">
+						<input type="hidden" name="s" value="">
+						<input type="text" name="q" value="" placeholder="search words">
+						<button type="submit" class="icon-search"></button>
+					</form>
+					<div class="clean"></div>
+				</nav>
 
-	</header>
-	<article>
-		ias<b>a</b> ...
-	</article>
-	<section>
-		<h1>Съёмки фильма Полипропилен</h1>
-		<p>История о том, как снимали фильм, где герои отдыхали на пляже,
-			потом пришёл антагонист, избил протагонистов, сбросил их в бассейн,
-			и что из этого получилось.</p>
-	</section>
-	<section>
-		<h1>Хороший язык</h1>
-		<p>История о том, как проходила студия изучения языка эсперанто,
-			в то время, как над ней, на веранде велась студия приколистов,
-			где травились анекдоты, и что из этого получилось.</p>
-	</section>
-	<footer>
+			</header>
+			<article>
+				ias<b>a</b> ...
+			</article>
+			<section>
+				<h1>Съёмки фильма Полипропилен</h1>
+				<p>История о том, как снимали фильм, где герои отдыхали на пляже,
+					потом пришёл антагонист, избил протагонистов, сбросил их в бассейн,
+					и что из этого получилось.</p>
+			</section>
+			<section>
+				<h1>Хороший язык</h1>
+				<p>История о том, как проходила студия изучения языка эсперанто,
+					в то время, как над ней, на веранде велась студия приколистов,
+					где травились анекдоты, и что из этого получилось.</p>
+			</section>
+			<footer>
 
-	</footer>
+			</footer>
+		</div>
+	</div>
 </body>
 
 </html>
