@@ -1,15 +1,14 @@
 
 html{
+	height: 100%;
 	margin: 0;
 	padding: 0;
 
 	& > body{
-		background-color: #FFFFFF;
-		background-image: url("/templates/default/index/img/bg-body-iasa-1.png");
-		background-position: center -150px;
-		background-repeat: repeat-x;
+		background: #FFFFFF;
+		background: url("/templates/default/index/img/bg-body-iasa-1.png") center -250px repeat-x;
 		margin: 0;
-		min-height: 100%;
+		height: 100%;
 		padding: 0;
 		position: relative;
 
@@ -17,7 +16,7 @@ html{
 			border: 1px solid green;
 
 			& > .paper-canvas {
-				margin: 0 64px;
+				margin: auto 64px;
 
 				& > header {
 					background-image: url("/templates/default/index/img/bg-header-iasa-1.png");
@@ -39,10 +38,9 @@ html{
 }
 
 nav.toolbar{
-	background-color: #d5dced;
-	border-radius: 0 0 8px 8px;
+	background-color: #c9dbf4;
+	border-radius: 0 0 12px 12px;
 	font-size: 10pt;
-	padding: 8px 0;
 	line-height: 16pt;
 	a{ text-decoration: none; }
 	img{ vertical-align: 0px; }
@@ -51,15 +49,11 @@ nav.toolbar{
 	li:hover a{ color: #ffffff; }
 	ul{ list-style: none; padding: 0 8px; }
 
-	& > *{ border: 1px solid red; }
 	#menu-top{ float: left; }
 	#menu-language{ float: right; }
 	#search-bar{ float: right; }
 	#search-bar{
-		margin-bottom: 0px;
-		input, button{ font-size: 8pt; }
-		input{ background-color: #ffffff; border: none; border-radius: 8px; margin-bottom: 0px; min-width: 128px; }
-		button{ background-color: transparent; border: none; }
+		&, & > *{ border: none; margin-bottom: 0px; padding-bottom: 0px; padding-top: 0px; }
 	}
 	#menu-top-home{ display: inline-block; height: 16px; width: 16px; }
 	#menu-top-home{ background: url("/templates/default/toolbar/home-16.png") no-repeat; }
